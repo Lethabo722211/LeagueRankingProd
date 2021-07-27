@@ -28,7 +28,7 @@ The expected output should be :
 5. Grouches, 0 pts
 ```
 
-## Running functional tests
+## Running Functional Tests
 Navigate to the artefacts folder and run
 ```
 pytest
