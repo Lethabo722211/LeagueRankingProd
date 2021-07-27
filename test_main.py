@@ -1,12 +1,12 @@
 
 from main import get_league_log, init, get_input_data
 
-
+"""Test for get_league_log() method"""
 def test_get_league_log():
     league_log = get_league_log('input.txt')
     assert league_log == {'Lions': 0, 'Snakes': 0, 'Tarantulas': 0, 'FC Awesome': 0, 'Grouches': 0}
 
-
+"""Test for init() method"""
 def test_init(capsys):
     init('input.txt')
     printed = capsys.readouterr()
@@ -16,9 +16,8 @@ def test_init(capsys):
                           "4. Snakes, 1 pts\n" \
                           "5. Grouches, 0 pts\n"
 
-
+"""Test for get_input_data() method"""
 def test_get_input_data(monkeypatch, capsys):
-
     monkeypatch.setattr('builtins.input', lambda x: 'input.txt')
     get_input_data()
     printed = capsys.readouterr()

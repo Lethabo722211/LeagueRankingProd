@@ -1,6 +1,6 @@
 import os
 
-
+"""This method gets the league log from the teams that played matches"""
 def get_league_log(sample_data):
 
     league_log = {}
@@ -17,7 +17,7 @@ def get_league_log(sample_data):
 
     return league_log
 
-
+"""This method initializes the league table and calculates teams points and finnally print out the updated league table"""
 def init(input_file):
 
     league_log = get_league_log(input_file)
@@ -51,7 +51,7 @@ def init(input_file):
         count += 1
         print(f'{count}. {team}, {league_table[team]} pts')
 
-
+"""This method prompts for sample data text file, to be used in producing the league table"""
 def get_input_data():
 
     data_file_name = input("Enter your sample data text file with it's .txt extension: ")
